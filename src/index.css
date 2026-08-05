@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white font-body text-charcoal antialiased;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+  .btn-primary {
+    @apply inline-block rounded bg-brand px-7 py-3.5 font-display font-bold uppercase tracking-wide text-white transition-colors hover:bg-brand-dark;
+  }
+  .section-kicker {
+    @apply mb-3 block font-display text-sm font-bold uppercase tracking-[0.2em] text-brand;
+  }
+  .section-title {
+    @apply font-display text-3xl font-bold sm:text-4xl;
+  }
+}
