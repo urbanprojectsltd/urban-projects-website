@@ -8,9 +8,10 @@ export const site = {
   whatsappLink: 'https://wa.me/35797849312',
   email: 'info@urbanprojectsltd.com',
   area: 'Cyprus',
+  // Towns/areas covered — used across the site and for local SEO.
+  areas: ['Limassol', 'Larnaca', 'Nicosia', 'Paphos', 'Ayia Napa', 'Protaras'],
   address: '', // TODO: address if you want it in the footer
-  // Free contact-form delivery via Web3Forms. Get a key in 30 seconds at
-  // https://web3forms.com (enter the email you want enquiries sent to), then
-  // paste it here. Until it is set, the form will show an error on submit.
-  web3formsKey: '', // TODO: paste your Web3Forms access key
+  // Contact form delivers via FormSubmit.co (free, no key). It sends to `email`
+  // above. First submission triggers a one-time confirmation email to that
+  // address — click the link once to activate, then enquiries arrive by email.
 }

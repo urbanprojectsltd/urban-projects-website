@@ -25,7 +25,7 @@ const faqs = [
   {
     question: 'What areas do you cover?',
     answer:
-      'We work across Cyprus. If you are not sure whether we reach you, just ask and we will let you know.',
+      'We work right across Cyprus, including Limassol, Larnaca, Nicosia, Paphos, Ayia Napa and Protaras. If you are not sure whether we reach you, just ask and we will let you know.',
   },
 ]
 

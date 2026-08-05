@@ -14,7 +14,7 @@ export default function Footer() {
           <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
             {site.tagline}
             <br />
-            Serving {site.area}.
+            Builders serving {site.areas.join(', ')} and across {site.area}.
           </p>
         </div>
 

@@ -12,24 +12,20 @@ export default function Contact() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (!site.web3formsKey) {
-      // No delivery key configured yet — fail loudly in dev, tell the visitor to call.
-      console.error('Contact form: set site.web3formsKey (https://web3forms.com) to receive enquiries.')
-      setStatus('error')
-      return
-    }
     setStatus('sending')
+    // Delivered by FormSubmit.co (free, no key) to site.email.
     const formData = new FormData(e.currentTarget)
-    formData.append('access_key', site.web3formsKey)
-    formData.append('subject', `New enquiry from the ${site.name} website`)
-    formData.append('from_name', site.name)
+    formData.append('_subject', `New enquiry from the ${site.name} website`)
+    formData.append('_template', 'table')
+    formData.append('_captcha', 'false')
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const res = await fetch(`https://formsubmit.co/ajax/${site.email}`, {
         method: 'POST',
+        headers: { Accept: 'application/json' },
         body: formData,
       })
       const data = await res.json()
-      setStatus(data.success ? 'sent' : 'error')
+      setStatus(data.success === 'true' || data.success === true ? 'sent' : 'error')
     } catch {
       setStatus('error')
     }
@@ -78,7 +74,7 @@ export default function Contact() {
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
             {/* Honeypot: bots fill this hidden field, real people never see it. */}
-            <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
+            <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
             <div className="grid gap-4 sm:grid-cols-2">
               <input className={inputClass} name="name" placeholder="Name *" required />
               <input

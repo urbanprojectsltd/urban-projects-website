@@ -17,8 +17,8 @@ export default function Hero() {
           {site.promise}
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-white drop-shadow">
-          Full home renovations, extensions, kitchens and bathrooms across {site.area}. Quality
-          work, honest pricing and results you can trust.
+          Full home renovations, extensions, kitchens, bathrooms, plumbing and tiling across{' '}
+          {site.area}. Quality work, honest pricing and results you can trust.
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <a href="#contact" className="btn-primary">
