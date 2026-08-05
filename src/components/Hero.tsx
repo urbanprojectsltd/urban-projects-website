@@ -5,7 +5,7 @@ export default function Hero() {
     <section
       id="top"
       className="relative flex min-h-screen items-center bg-cover bg-center pt-16"
-      style={{ backgroundImage: 'url(/hero.jpg)' }}
+      style={{ backgroundImage: `url(${import.meta.env.BASE_URL}hero.jpg)` }}
     >
       {/* Light tint for text contrast, fading to white to blend into the next section */}
       <div className="absolute inset-0 bg-charcoal/40" />

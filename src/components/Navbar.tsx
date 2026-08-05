@@ -16,7 +16,7 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-charcoal/10 bg-white/90 backdrop-blur">
       <div className="container-site flex h-16 items-center justify-between">
         <a href="#top" className="flex items-center gap-3">
-          <img src="/logo-hands.png" alt="Urban Projects logo" className="h-8 w-auto" />
+          <img src={`${import.meta.env.BASE_URL}logo-hands.png`} alt="Urban Projects logo" className="h-8 w-auto" />
           <span className="font-display text-xl font-extrabold uppercase tracking-wider">
             Urban<span className="text-brand">Projects</span>
           </span>

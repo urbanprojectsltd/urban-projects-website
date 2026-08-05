@@ -120,7 +120,7 @@ export default function Projects() {
                   className="group relative aspect-[4/3] overflow-hidden rounded-lg bg-charcoal-light text-left"
                 >
                   <img
-                    src={cat.cover}
+                    src={`${import.meta.env.BASE_URL}${cat.cover.slice(1)}`}
                     alt={cat.name}
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -152,7 +152,7 @@ export default function Projects() {
                   className="group relative aspect-[4/3] overflow-hidden rounded-lg bg-charcoal-light"
                 >
                   <img
-                    src={project.image}
+                    src={`${import.meta.env.BASE_URL}${project.image.slice(1)}`}
                     alt={project.title || project.tag}
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"

@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container-site grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <p className="flex items-center gap-2.5 font-display text-lg font-extrabold uppercase tracking-wider">
-            <img src="/logo-hands.png" alt="" className="h-6 w-auto" />
+            <img src={`${import.meta.env.BASE_URL}logo-hands.png`} alt="" className="h-6 w-auto" />
             <span>
               Urban<span className="text-brand">Projects</span>
             </span>
