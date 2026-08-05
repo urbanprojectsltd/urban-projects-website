@@ -6,7 +6,7 @@ export const site = {
   phone: '+357 97 524276', // office
   whatsapp: '+357 97 849312',
   whatsappLink: 'https://wa.me/35797849312',
-  email: 'hello@urbanprojects.cy', // TODO: real email
+  email: 'info@urbanprojectsltd.com',
   area: 'Cyprus',
   address: '', // TODO: address if you want it in the footer
   // Free contact-form delivery via Web3Forms. Get a key in 30 seconds at
